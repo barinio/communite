@@ -12,14 +12,18 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
         <main className="flex-grow">{children}</main>
 
         <footer className="w-full flex items-center justify-center py-3">
+          <Link isExternal className="flex items-center gap-1 text-current mr-20 " href="">
+            <p className="text-zinc-400 opacity-50">Politique de confidentialité</p>
+          </Link>
           <Link
             isExternal
             className="flex items-center gap-1 text-current"
-            href="https://nextui-docs-v2.vercel.app?utm_source=next-pages-template"
-            title="nextui.org homepage"
+            underline="always"
+            href=""
           >
-            <span className="text-default-600">Powered by</span>
-            <p className="text-primary">NextUI</p>
+            <p className="Suppercase uppercase text-zinc-400 opacity-50">
+              Information sur la protection des renseignements personnels
+            </p>
           </Link>
         </footer>
       </div>
