@@ -69,6 +69,7 @@
       }
     ],
     "react/self-closing-comp": "warn",
+    "react/no-unescaped-entities": 0,
     // "react/jsx-sort-props": [
     //   "warn",
     //   {
