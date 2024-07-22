@@ -12,14 +12,20 @@ import WelcomeImg from "@/images/welcome-img.png";
 import socialDropDownImg from "@/images/social-drop-down.svg";
 import { welcomeDescriptionData } from "@/data/welcomeDescriptionData";
 import { socialLinkData } from "@/data/socialLinkData";
-// import WelcomeDropdownItem from "@/components/WelcomeDropdownItem";
+import { ThemeSwitch } from "@/components/theme-switch";
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="flex justify-end w-full gap-6">
-          <p>logo</p>
+        <div className="hidden sm:flex justify-end w-full gap-6">
+          <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
+            <p className="font-bold text-inherit">logo</p>
+          </Link>
+
+          {/* перемикач теми і мови на десктоп */}
+          <ThemeSwitch />
+
           <Button
             radius="none"
             variant="faded"
@@ -27,10 +33,7 @@ export default function IndexPage() {
           >
             FR
           </Button>
-
           <Dropdown className="min-w-[55px] w-full p-0 mt-3 bg-transparent">
-            {/* colors #1D1D1FB2 */}
-            {/* bordrers #424245B2 */}
             <DropdownTrigger>
               <Button
                 variant="faded"
@@ -43,6 +46,7 @@ export default function IndexPage() {
               {socialLinkData.map(({ key, linkPath, socialImg }) => (
                 <DropdownItem
                   key={key}
+                  textValue="social"
                   className="bg-content1 mb-2 rounded-full w-[55px] h-[55px] flex justify-center items-center"
                 >
                   <Link isExternal href={linkPath} className="flex justify-center items-center">
@@ -54,13 +58,18 @@ export default function IndexPage() {
           </Dropdown>
         </div>
 
-        <div className="main flex pl-12 pr-28 gap-6">
+        <div className="main-content flex flex-col xl:flex-row items-center sm:pl-12 sm:pr-28 gap-6">
           <div className="fist-part flex flex-col items-center ">
             <h1 className="mb-5 text-3xl font-extrabold text-[#fdab0c]">Notre Expertise</h1>
-            <img src={WelcomeImg} alt="WelcomeImg" width={516} className="max-w-lg" />
+            <img
+              src={WelcomeImg}
+              alt="WelcomeImg"
+              width={516}
+              className="max-w-lg w-[245px] sm:w-full"
+            />
             <Button
               radius="full"
-              className="mt-16 h-[66px] w-[273px] italic text-2xl font-extrabold text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
+              className="hidden sm:flex mt-16 h-[66px] w-[273px] italic text-2xl font-extrabold text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
             >
               Contacte-nous
             </Button>
@@ -68,14 +77,23 @@ export default function IndexPage() {
 
           <div className="second-part flex flex-col">
             {welcomeDescriptionData.map(({ title, description }) => (
-              <div key={title} className="w-[407px] mb-8">
-                <h2 className="pl-8 text-base leading-9 text-[#fdab0c] font-extrabold">{title}</h2>
+              <div key={title} className="w-[393px] sm:max-w-[407px] sm:w-full mb-8">
+                <h2 className="sm:pl-8 text-center sm:text-left text-base leading-9 text-[#fdab0c] font-extrabold">
+                  {title}
+                </h2>
                 <p className="text-[#010101] text-xs leading-[18px] font-extrabold rounded-[45px] px-[37px] py-[30px] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]">
                   {description}
                 </p>
               </div>
             ))}
           </div>
+
+          <Button
+            radius="full"
+            className="sm:hidden flex justify-center mt-10 h-[66px] w-[273px] italic text-2xl font-extrabold text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
+          >
+            Contacte-nous
+          </Button>
         </div>
       </section>
     </DefaultLayout>
