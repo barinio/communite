@@ -4,36 +4,29 @@ import {
   NavbarContent,
   NavbarItem,
   NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem
+  NavbarMenu
 } from "@nextui-org/navbar";
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 
+import ButtonDropOpen from "./buttonDropOpen";
+
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-// import {
-//   TwitterIcon,
-//   GithubIcon,
-//   DiscordIcon,
-//   HeartFilledIcon,
-//   SearchIcon
-// } from "@/components/icons";
-// import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
   return (
-    <NextUINavbar maxWidth="sm" className="w-80 h-screen" position="sticky">
-      <NavbarContent className="max-w-[258px] h-screen" justify="start">
-        {/* <NavbarBrand className="gap-3 max-w-fit">
-          <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
-          </Link>
-        </NavbarBrand> */}
-        <div className="hidden sm:flex flex-col gap-4 ml-2 h-screen justify-around">
+    <NextUINavbar
+      maxWidth="sm"
+      className="backdrop-blur-none bg-background-transparent sm:w-80 max-h-screen [&>header]:p-0 [&>header]:h-full flex-grow sm:relative absolute "
+      position="sticky"
+    >
+      <NavbarContent className="max-w-[258px] max-h-screen h-full" justify="start">
+        <div className="hidden sm:flex flex-col max-h-screen h-full border-r-1 border-r-[#1D1E234D]">
           {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
+            <NavbarItem
+              key={item.href}
+              className="flex-1 flex [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full px-6"
+            >
               <Link
                 className={clsx(
                   linkStyles({ color: "foreground" }),
@@ -49,38 +42,54 @@ export const Navbar = () => {
         </div>
       </NavbarContent>
 
-      {/* перемикач теми і мови на десктоп */}
-      {/* <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
-        <NavbarItem className="hidden sm:flex gap-2">
-          <ThemeSwitch />
-        </NavbarItem>
-      </NavbarContent> */}
+      <div className="sm:hidden">
+        <NavbarMenuToggle className="w-6 h-6 absolute top-6 right-6" icon={<ButtonDropOpen />} />
+      </div>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>
-
-      <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navItems.length - 1
-                      ? "danger"
-                      : "foreground"
-                }
-                href="#"
-                size="lg"
+      <NavbarMenu
+        className="min-h-screen p-0 bg-black "
+        style={{ ["--navbar-height" as string]: "0" }}
+      >
+        <NavbarContent className="w-full max-h-screen h-full" justify="start">
+          <div className="w-full flex flex-col max-h-screen h-full">
+            {siteConfig.navItems.map((item) => (
+              <NavbarItem
+                key={item.href}
+                className="flex-1 flex [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full"
               >
-                {item.label}
+                <Link
+                  className={clsx(
+                    linkStyles({ color: "foreground" }),
+                    "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  )}
+                  color="foreground"
+                  href={item.href}
+                >
+                  {item.label}
+                </Link>
+              </NavbarItem>
+            ))}
+
+            <NavbarItem className="flex-1 flex [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full">
+              <Link
+                className="flex flex-1 justify-center items-center gap-1 text-current sm:mr-20 "
+                href=""
+              >
+                <p className="text-zinc-400 opacity-50 text-xl">Politique de confidentialité</p>
               </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
+            </NavbarItem>
+
+            <Link
+              className="flex flex-1 justify-center items-center gap-1 text-current"
+              underline="always"
+              href=""
+            >
+              <p className="w-[292px] leading-8 uppercase text-zinc-400 opacity-50 sm:text-xl">
+                Information sur la protection des renseignements personnels
+              </p>
+            </Link>
+          </div>
+        </NavbarContent>
       </NavbarMenu>
     </NextUINavbar>
   );
