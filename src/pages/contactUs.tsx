@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Input, Card, Button, Textarea } from "@nextui-org/react";
 
-import { title } from "@/components/primitives";
+// import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 
 export default function ContactUsPage() {
@@ -31,22 +31,22 @@ export default function ContactUsPage() {
       telephone: "",
       comments: "",
     });
-    console.log("formData :>> ", formData);
-    // setShowThankPage(true);
+    // console.log("formData :>> ", formData);
   };
 
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <h1 className={title()}>contact-us</h1>
+        {/* <h1 className={title()}>contact-us</h1> */}
 
-        <Card className="p-6 w-full mb-6 md:p-11 lg:w-[696px]">
+        <Card className="p-6 w-full mb-6 md:p-11 lg:w-[696px] mt-16">
           <form>
             <Input
               className="mb-7"
               fullWidth
               color="default"
               size="lg"
+              placeholder="Non complet"
               // placeholder={t("inputName")}
               name="username"
               value={formData.username}
@@ -59,6 +59,7 @@ export default function ContactUsPage() {
               fullWidth
               color="default"
               size="lg"
+              placeholder="Courriel"
               // placeholder={t("inputMail")}
               name="email"
               type="email"
@@ -71,6 +72,7 @@ export default function ContactUsPage() {
               fullWidth
               color="default"
               size="lg"
+              placeholder="Telephone"
               // placeholder={t("inputTel")}
               name="telephone"
               type="telephone"
@@ -83,6 +85,7 @@ export default function ContactUsPage() {
                 input: "min-h-32 md:min-h-48",
               }}
               minRows={6}
+              placeholder="Commentaire"
               // placeholder={t("inputCom")}
               name="comments"
               value={formData.comments}
@@ -97,7 +100,7 @@ export default function ContactUsPage() {
           size="lg"
           style={{ backgroundColor: "#AD8E20" }}
         >
-          Send
+          SEND
           {/* {t("contactBtn1")} */}
         </Button>
       </section>

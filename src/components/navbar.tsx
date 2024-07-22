@@ -1,11 +1,11 @@
-import { Link } from "@nextui-org/link";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
   NavbarItem,
   NavbarMenuToggle,
-  NavbarMenu
-} from "@nextui-org/navbar";
+  NavbarMenu,
+  Link,
+} from "@nextui-org/react";
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 
@@ -20,7 +20,10 @@ export const Navbar = () => {
       className="backdrop-blur-none bg-background-transparent sm:w-80 max-h-screen [&>header]:p-0 [&>header]:h-full flex-grow sm:relative absolute "
       position="sticky"
     >
-      <NavbarContent className="max-w-[258px] max-h-screen h-full" justify="start">
+      <NavbarContent
+        className="max-w-[258px] max-h-screen h-full"
+        justify="start"
+      >
         <div className="hidden sm:flex flex-col max-h-screen h-full border-r-1 border-r-[#1D1E234D]">
           {siteConfig.navItems.map((item) => (
             <NavbarItem
@@ -43,7 +46,10 @@ export const Navbar = () => {
       </NavbarContent>
 
       <div className="sm:hidden">
-        <NavbarMenuToggle className="w-6 h-6 absolute top-6 right-6" icon={<ButtonDropOpen />} />
+        <NavbarMenuToggle
+          className="w-6 h-6 absolute top-6 right-6"
+          icon={<ButtonDropOpen />}
+        />
       </div>
 
       <NavbarMenu
@@ -75,7 +81,9 @@ export const Navbar = () => {
                 className="flex flex-1 justify-center items-center gap-1 text-current sm:mr-20 "
                 href=""
               >
-                <p className="text-zinc-400 opacity-50 text-xl">Politique de confidentialité</p>
+                <p className="text-zinc-400 opacity-50 text-xl">
+                  Politique de confidentialité
+                </p>
               </Link>
             </NavbarItem>
 
