@@ -14,10 +14,19 @@ import { welcomeDescriptionData } from "@/data/welcomeDescriptionData";
 import { socialLinkData } from "@/data/socialLinkData";
 import { ThemeSwitch } from "@/components/theme-switch";
 
+//     content: "";
+//     position: absolute;
+//     border-radius: 50%;
+//     filter: blur(100px);
+//     background-color: #AC9622; 20%
+//     width: 265px;
+//     height: 265px;
+//     left: 99 %;
+
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 before:content-[''] before:absolute before:w-[750px] before:h-[550px] before:left-[50px] before:top-[-150px] before:rounded-full before:bg-gradient-to-b before:from-[#AC962244] before:to-[#44490600] before:blur-[100px] ">
         <div className="hidden sm:flex justify-end w-full gap-6">
           <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
             <p className="font-bold text-inherit">logo</p>
