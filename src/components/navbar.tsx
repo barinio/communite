@@ -4,26 +4,26 @@ import {
   NavbarItem,
   NavbarMenuToggle,
   NavbarMenu,
-  Link,
+  Link
 } from "@nextui-org/react";
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 import ButtonDropOpen from "./buttonDropOpen";
 
 import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
+  const { t } = useTranslation();
+
   return (
     <NextUINavbar
       maxWidth="sm"
       className="backdrop-blur-none bg-background-transparent sm:w-80 max-h-screen [&>header]:p-0 [&>header]:h-full flex-grow sm:relative absolute "
       position="sticky"
     >
-      <NavbarContent
-        className="max-w-[258px] max-h-screen h-full"
-        justify="start"
-      >
+      <NavbarContent className="max-w-[258px] max-h-screen h-full" justify="start">
         <div className="hidden sm:flex flex-col max-h-screen h-full border-r-1 border-r-[#1D1E234D]">
           {siteConfig.navItems.map((item) => (
             <NavbarItem
@@ -38,7 +38,7 @@ export const Navbar = () => {
                 color="foreground"
                 href={item.href}
               >
-                {item.label}
+                {t(`${item.label}`)}
               </Link>
             </NavbarItem>
           ))}
@@ -46,10 +46,7 @@ export const Navbar = () => {
       </NavbarContent>
 
       <div className="sm:hidden">
-        <NavbarMenuToggle
-          className="w-6 h-6 absolute top-6 right-6"
-          icon={<ButtonDropOpen />}
-        />
+        <NavbarMenuToggle className="w-6 h-6 absolute top-6 right-6" icon={<ButtonDropOpen />} />
       </div>
 
       <NavbarMenu
@@ -71,7 +68,7 @@ export const Navbar = () => {
                   color="foreground"
                   href={item.href}
                 >
-                  {item.label}
+                  {t(`${item.label}`)}
                 </Link>
               </NavbarItem>
             ))}
@@ -81,9 +78,7 @@ export const Navbar = () => {
                 className="flex flex-1 justify-center items-center gap-1 text-current sm:mr-20 "
                 href=""
               >
-                <p className="text-zinc-400 opacity-50 text-xl">
-                  Politique de confidentialité
-                </p>
+                <p className="text-zinc-400 opacity-50 text-xl">{t("privacyPolicy")}</p>
               </Link>
             </NavbarItem>
 
@@ -92,8 +87,8 @@ export const Navbar = () => {
               underline="always"
               href=""
             >
-              <p className="w-[292px] leading-8 uppercase text-zinc-400 opacity-50 sm:text-xl">
-                Information sur la protection des renseignements personnels
+              <p className="w-[292px] text-center leading-8 uppercase text-zinc-400 opacity-50 sm:text-xl">
+                {t("informationOnPersonalDataProtection")}
               </p>
             </Link>
           </div>
