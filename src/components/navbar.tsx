@@ -9,6 +9,7 @@ import {
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
+import { useLocation, Link as RouterLink } from "react-router-dom";
 
 import ButtonDropOpen from "./buttonDropOpen";
 
@@ -17,10 +18,12 @@ import { siteConfig } from "@/config/site";
 export const Navbar = () => {
   const { t } = useTranslation();
 
+  const location = useLocation();
+
   return (
     <NextUINavbar
       maxWidth="sm"
-      className="backdrop-blur-none bg-background-transparent sm:w-80 max-h-screen [&>header]:p-0 [&>header]:h-full flex-grow sm:relative absolute "
+      className="backdrop-blur-none bg-background-transparent sm:max-w-80 max-h-screen [&>header]:p-0 [&>header]:h-full flex-grow sm:relative absolute "
       position="sticky"
     >
       <NavbarContent className="max-w-[258px] max-h-screen h-full" justify="start">
@@ -28,18 +31,22 @@ export const Navbar = () => {
           {siteConfig.navItems.map((item) => (
             <NavbarItem
               key={item.href}
-              className="flex-1 flex [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full px-6"
+              className={clsx(
+                "flex-1 flex [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full px-6",
+                location.pathname === item.href &&
+                  "bg-[#7B765E12] shadow-[inset_2px_6px_4px_0px_#00000040]"
+              )}
             >
-              <Link
+              <RouterLink
+                to={item.href}
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium text-zinc-400",
+                  location.pathname === item.href && "text-[#7B765E]"
                 )}
-                color="foreground"
-                href={item.href}
               >
-                {t(`${item.label}`)}
-              </Link>
+                {t(item.label)}
+              </RouterLink>
             </NavbarItem>
           ))}
         </div>

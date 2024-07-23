@@ -1,61 +1,16 @@
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  Button,
-  DropdownItem,
-  Link
-} from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import { useTranslation } from "react-i18next";
 
 import DefaultLayout from "@/layouts/default";
 import WelcomeImg from "@/images/welcome-img.png";
-import socialDropDownImg from "@/images/social-drop-down.svg";
-import logo from "@/images/logo.svg";
 import { welcomeDescriptionData } from "@/data/welcomeDescriptionData";
-import { socialLinkData } from "@/data/socialLinkData";
-import { ThemeSwitch } from "@/components/theme-switch";
-import SwitcherLanguage from "@/i18n/SwitcherLanguage";
 
 export default function IndexPage() {
   const { t } = useTranslation();
 
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 before:content-[''] before:absolute xl:before:w-[750px] before:h-[550px] before:left-[50px] before:top-[-150px] before:rounded-full before:bg-gradient-to-b before:from-[#AC962244] before:to-[#44490600] before:blur-[100px] ">
-        <div className="hidden sm:flex justify-end w-full gap-6">
-          <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
-            <img src={logo} alt="logo-commUnite" />
-          </Link>
-
-          <ThemeSwitch />
-          <SwitcherLanguage />
-
-          <Dropdown className="min-w-[55px] w-full p-0 mt-3 bg-transparent">
-            <DropdownTrigger>
-              <Button
-                variant="faded"
-                className="px-0 min-w-8 h-9 rounded-none bg-[#1D1D1F] border-[#424245]"
-              >
-                <img src={socialDropDownImg} alt="social drop down img" width={24} height={9} />
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu aria-label="Static Actions" className="flex flex-col">
-              {socialLinkData.map(({ key, linkPath, socialImg }) => (
-                <DropdownItem
-                  key={key}
-                  textValue="social"
-                  className="bg-content1 mb-2 rounded-full w-[55px] h-[55px] flex justify-center items-center"
-                >
-                  <Link isExternal href={linkPath} className="flex justify-center items-center">
-                    <img src={socialImg} alt={key} width={30} />
-                  </Link>
-                </DropdownItem>
-              ))}
-            </DropdownMenu>
-          </Dropdown>
-        </div>
-
+      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
         <div className="main-content flex flex-col xl:flex-row items-center sm:pl-12 sm:pr-28 gap-6">
           <div className="fist-part flex flex-col items-center ">
             <h1 className="mb-5 text-3xl font-extrabold text-[#fdab0c]">{t("ourExpertise")}</h1>

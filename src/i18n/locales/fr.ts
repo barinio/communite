@@ -22,6 +22,17 @@ export const fr = {
   predictiveFinancialReportingDescription:
     "Grâce à l'analyse de données par IA et de nos experts en crédit, nos rapports financiers détaillés offrent non seulement une vision claire de votre situation actuelle, mais également des prévisions précises pour une meilleure planification financière.",
 
+  // OurServicesPage
+  btnConnectWithUs: "Connecté-nous",
+  ServicesItems1:
+    "Nos systèmes automatisés gèrent vos créances et facilitent la communication et le paiement de vos recevables, garantissant une précision inégalée et des résultats optimaux",
+  ServicesItems2:
+    "Notre plateforme est continuellement mise à jour par des avocats et des experts en gestion de créances, assurant que chaque action entreprise est optimale, légalement fondée et éthiquement irréprochable.",
+  ServicesItems3:
+    "Nos solutions de gestion, rigoureusement encadrées par des avocats spécialisés, assurent une fiabilité absolue et une conformité légale irréprochable.",
+  ServicesItems4:
+    "La protection de vos données est notre priorité. Nos solutions sont certifiées ISO 27001 et SOC 2 Type II, garantissant les plus hauts standards de sécurité de l'information et de contrôle des données.",
+
   // footer
   privacyPolicy: "Politique de confidentialité",
   informationOnPersonalDataProtection:
