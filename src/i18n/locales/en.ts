@@ -36,5 +36,35 @@ export const en = {
 
   // footer
   privacyPolicy: "Privacy Policy",
-  informationOnPersonalDataProtection: "Information on personal data protection"
+  informationOnPersonalDataProtection:
+    "Information on personal data protection",
+
+  // contact us
+
+  inputName: "Full name",
+  inputMail: "E-mail",
+  inputTel: "Telephone",
+  inputCom: "Comments",
+  contactBtn1: "Send",
+
+  // Our Methodology
+  methodologyTitle: "Our Competitive Advantage",
+  methodologyBtn: "Connect with us",
+  methodologyText:
+    "Free yourself from administrative constraints and focus on growing your business. At CoMUniti, we manage your receivables while creating an optimal and secure financial environment for your growth, supported by specialized legal expertise.",
+  allInOneSolution: "All-in-One Solution",
+  allInOneSolutionDescription:
+    "We master the challenges related to unpaid accounts and invoices. Our experienced team, supported by advanced automation technologies, ensures the timeliness of your collections.",
+  cuttingEdgeTechnology: "Cutting-Edge Technology",
+  cuttingEdgeTechnologyDescription:
+    "Nous maîtrisons les enjeux liés aux comptes et factures impayés. Notre équipe chevronnée, appuyée par des technologies d'automatisation avancées, veille à la ponctualité de vos encaissements.",
+  certifiedSecurity: "Certified Security",
+  certifiedSecurityDescription:
+    "With our ISO 27001 and SOC 2 Type II certified solutions, your data is protected according to the highest industry standards.",
+  integratedLegalExpertise: "Integrated Legal Expertise",
+  integratedLegalExpertiseDescription:
+    "The direct involvement of specialized lawyers guarantees a legally impeccable approach at every stage.",
+  operationalCustomization: "Operational Customization",
+  operationalCustomizationDescription:
+    "Our agile processes adapt to the specifics of your business, ensuring seamless integration and optimal responsiveness to changes in your business environment. We continuously optimize our methods to meet your evolving needs, ensuring maximum efficiency and constant relevance of our services.",
 };

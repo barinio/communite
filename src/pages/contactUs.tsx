@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { Input, Card, Button, Textarea } from "@nextui-org/react";
+import { useTranslation } from "react-i18next";
 
-// import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 
 export default function ContactUsPage() {
@@ -13,7 +13,7 @@ export default function ContactUsPage() {
     comments: "",
   });
 
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -46,21 +46,18 @@ export default function ContactUsPage() {
               fullWidth
               color="default"
               size="lg"
-              placeholder="Non complet"
-              // placeholder={t("inputName")}
+              placeholder={t("inputName")}
               name="username"
               value={formData.username}
               onChange={handleChange}
             />
-            {/* <Image alt="" src="" width={20} /> */}
 
             <Input
               className="mb-7"
               fullWidth
               color="default"
               size="lg"
-              placeholder="Courriel"
-              // placeholder={t("inputMail")}
+              placeholder={t("inputMail")}
               name="email"
               type="email"
               value={formData.email}
@@ -72,8 +69,7 @@ export default function ContactUsPage() {
               fullWidth
               color="default"
               size="lg"
-              placeholder="Telephone"
-              // placeholder={t("inputTel")}
+              placeholder={t("inputTel")}
               name="telephone"
               type="telephone"
               value={formData.telephone}
@@ -85,8 +81,7 @@ export default function ContactUsPage() {
                 input: "min-h-32 md:min-h-48",
               }}
               minRows={6}
-              placeholder="Commentaire"
-              // placeholder={t("inputCom")}
+              placeholder={t("inputCom")}
               name="comments"
               value={formData.comments}
               onChange={handleChange}
@@ -100,8 +95,7 @@ export default function ContactUsPage() {
           size="lg"
           style={{ backgroundColor: "#AD8E20" }}
         >
-          SEND
-          {/* {t("contactBtn1")} */}
+          {t("contactBtn1")}
         </Button>
       </section>
     </DefaultLayout>
