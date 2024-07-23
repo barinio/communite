@@ -1,6 +1,9 @@
 import { Link } from "@nextui-org/react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Link
@@ -8,7 +11,7 @@ const Footer = () => {
         className="flex flex-1 sm:max-w-[180px] justify-center items-center gap-1 text-current sm:mr-20 "
         href=""
       >
-        <p className="text-zinc-400 opacity-50 text-sm">Politique de confidentialité</p>
+        <p className="text-zinc-400 opacity-50 text-sm">{t("privacyPolicy")}</p>
       </Link>
 
       <Link
@@ -18,7 +21,7 @@ const Footer = () => {
         href=""
       >
         <p className=" leading-8 uppercase text-zinc-400 opacity-50 sm:text-sm">
-          Information sur la protection des renseignements personnels
+          {t("informationOnPersonalDataProtection")}
         </p>
       </Link>
     </>

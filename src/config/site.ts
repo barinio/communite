@@ -1,27 +1,27 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Vite + NextUI",
+  name: "CommUnite",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
-      label: "Welcome",
+      label: "welcome",
       href: "/welcome"
     },
     {
-      label: "Our Services",
+      label: "ourServices",
       href: "/our-services"
     },
     {
-      label: "Our Methodology",
+      label: "ourMethodology",
       href: "/our-methodology"
     },
     {
-      label: "Contact Us",
+      label: "contactUs",
       href: "/contact-us"
     },
     {
-      label: "Advantages of CoMUniti",
+      label: "advantagesOfCoMUniti",
       href: "/advantages-of-comuniti"
     }
   ],

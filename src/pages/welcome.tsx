@@ -6,42 +6,31 @@ import {
   DropdownItem,
   Link
 } from "@nextui-org/react";
+import { useTranslation } from "react-i18next";
 
 import DefaultLayout from "@/layouts/default";
 import WelcomeImg from "@/images/welcome-img.png";
 import socialDropDownImg from "@/images/social-drop-down.svg";
+import logo from "@/images/logo.svg";
 import { welcomeDescriptionData } from "@/data/welcomeDescriptionData";
 import { socialLinkData } from "@/data/socialLinkData";
 import { ThemeSwitch } from "@/components/theme-switch";
-
-//     content: "";
-//     position: absolute;
-//     border-radius: 50%;
-//     filter: blur(100px);
-//     background-color: #AC9622; 20%
-//     width: 265px;
-//     height: 265px;
-//     left: 99 %;
+import SwitcherLanguage from "@/i18n/SwitcherLanguage";
 
 export default function IndexPage() {
+  const { t } = useTranslation();
+
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 before:content-[''] before:absolute before:w-[750px] before:h-[550px] before:left-[50px] before:top-[-150px] before:rounded-full before:bg-gradient-to-b before:from-[#AC962244] before:to-[#44490600] before:blur-[100px] ">
+      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10 before:content-[''] before:absolute xl:before:w-[750px] before:h-[550px] before:left-[50px] before:top-[-150px] before:rounded-full before:bg-gradient-to-b before:from-[#AC962244] before:to-[#44490600] before:blur-[100px] ">
         <div className="hidden sm:flex justify-end w-full gap-6">
           <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
-            <p className="font-bold text-inherit">logo</p>
+            <img src={logo} alt="logo-commUnite" />
           </Link>
 
-          {/* перемикач теми і мови на десктоп */}
           <ThemeSwitch />
+          <SwitcherLanguage />
 
-          <Button
-            radius="none"
-            variant="faded"
-            className="px-2 min-w-8 h-9 rounded-none bg-[#1D1D1F] border-[#424245]"
-          >
-            FR
-          </Button>
           <Dropdown className="min-w-[55px] w-full p-0 mt-3 bg-transparent">
             <DropdownTrigger>
               <Button
@@ -69,7 +58,7 @@ export default function IndexPage() {
 
         <div className="main-content flex flex-col xl:flex-row items-center sm:pl-12 sm:pr-28 gap-6">
           <div className="fist-part flex flex-col items-center ">
-            <h1 className="mb-5 text-3xl font-extrabold text-[#fdab0c]">Notre Expertise</h1>
+            <h1 className="mb-5 text-3xl font-extrabold text-[#fdab0c]">{t("ourExpertise")}</h1>
             <img
               src={WelcomeImg}
               alt="WelcomeImg"
@@ -80,7 +69,7 @@ export default function IndexPage() {
               radius="full"
               className="hidden sm:flex mt-16 h-[66px] w-[273px] italic text-2xl font-extrabold text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
             >
-              Contacte-nous
+              {t("contactUsBtn")}
             </Button>
           </div>
 
@@ -88,10 +77,10 @@ export default function IndexPage() {
             {welcomeDescriptionData.map(({ title, description }) => (
               <div key={title} className="w-[393px] sm:max-w-[407px] sm:w-full mb-8">
                 <h2 className="sm:pl-8 text-center sm:text-left text-base leading-9 text-[#fdab0c] font-extrabold">
-                  {title}
+                  {t(`${title}`)}
                 </h2>
                 <p className="text-[#010101] text-xs leading-[18px] font-extrabold rounded-[45px] px-[37px] py-[30px] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]">
-                  {description}
+                  {t(`${description}`)}
                 </p>
               </div>
             ))}
@@ -101,7 +90,7 @@ export default function IndexPage() {
             radius="full"
             className="sm:hidden flex justify-center mt-10 h-[66px] w-[273px] italic text-2xl font-extrabold text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
           >
-            Contacte-nous
+            {t("contactUsBtn")}
           </Button>
         </div>
       </section>
