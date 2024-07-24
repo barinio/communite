@@ -65,4 +65,7 @@ export const fr = {
   operationalCustomization: "Personnalisation Opérationnelle",
   operationalCustomizationDescription:
     "Nos processus agiles s'adaptent aux spécificités de votre entreprise, assurant une intégration fluide et une réactivité optimale face aux évolutions de votre environnement d'affaires. Nous optimisons continuellement nos méthodes pour répondre à vos besoins évolutifs, assurant ainsi une efficacité maximale et une pertinence constante de nos services.",
+
+  // Advantages of Communiti
+  advantagesCommunitiTitle: "Advantages of Communiti",
 };
