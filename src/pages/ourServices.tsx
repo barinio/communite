@@ -2,7 +2,7 @@ import { Button } from "@nextui-org/react";
 import { useTranslation } from "react-i18next";
 
 import DefaultLayout from "@/layouts/default";
-import mainserv from "@/images/mainserv.png";
+import mainserv from "@/images/our-services.png";
 import itemBgImg from "@/images/bg-service-item.png";
 import { ourServicesData } from "@/data/ourServicesData";
 
@@ -33,11 +33,10 @@ export default function OurServicesPage() {
               <li
                 key={text}
                 style={{ backgroundImage: `url(${itemBgImg})` }}
-                // className={`relative before:content-[''] before:absolute before:border-t-2 before:border-[#B6B6B6]  ${classBefore}`}
-                className="flex items-center pl-3  gap-3 max-w-[450px] w-full h-[100px] bg-cover bg-center bg-no-repeat"
+                className="relative flex items-center pl-36 gap-3 max-w-[450px] w-[438px] h-[100px] bg-cover bg-center bg-no-repeat"
               >
-                <img src={icon} alt={text} />
-                <p className="text-start text-[13px] leading-none text-[#1F1D15] font-semibold pr-14">
+                <img src={icon} alt={text} className="absolute right-[310px]" />
+                <p className="text-start text-[13px] max-w-80 w-full leading-none text-[#1F1D15] font-semibold pr-14">
                   {t(`${text}`)}
                 </p>
               </li>

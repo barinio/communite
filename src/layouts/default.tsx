@@ -7,10 +7,10 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
     "before:content-[''] before:absolute xl:before:w-[750px] before:h-[550px] before:left-[50px] before:top-[-150px] before:rounded-full before:bg-gradient-to-b before:from-[#AC962244] before:to-[#44490600] before:blur-[100px] ";
 
   return (
-    <div className="container mx-auto max-w-[1440px] max-h-[992px] px-6 flex-grow flex flex-col sm:flex-row relative">
+    <div className="container mx-auto max-w-[1440px] px-6 flex-grow flex relative">
       <Navbar />
 
-      <div className={`relative flex flex-col max-h-[992px] flex-grow ${beforeElipsStyles}`}>
+      <div className={`relative flex flex-col flex-grow ${beforeElipsStyles}`}>
         <main className="flex-grow">
           <SwitcherBar />
           {children}

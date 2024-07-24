@@ -9,7 +9,6 @@ import {
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
-import { useLocation, Link as RouterLink } from "react-router-dom";
 
 import ButtonDropOpen from "./buttonDropOpen";
 
@@ -18,16 +17,22 @@ import { siteConfig } from "@/config/site";
 export const Navbar = () => {
   const { t } = useTranslation();
 
-  const location = useLocation();
-
   return (
     <NextUINavbar
       maxWidth="sm"
-      className="backdrop-blur-none bg-background-transparent sm:max-w-80 max-h-screen [&>header]:p-0 [&>header]:h-full flex-grow sm:relative absolute "
+      // backdrop-blur-none
+      className="bg-background-transparent sm:max-w-80 max-h-screen [&>header]:p-0 [&>header]:h-full sm:sticky absolute "
+      classNames={{
+        item: [
+          "data-[active=true]:text-primary",
+          "data-[active=true]:font-medium",
+          "data-[active=true]:text-[#7B765E]"
+        ]
+      }}
       position="sticky"
     >
-      <NavbarContent className="max-w-[258px] max-h-screen h-full" justify="start">
-        <div className="hidden sm:flex flex-col max-h-screen h-full border-r-1 border-r-[#1D1E234D]">
+      <NavbarContent className="max-w-[258px] sticky top-0 " justify="start">
+        <div className="hidden sm:flex flex-col max-h-screen h-full border-r-1 border-r-[#1D1E234D] sticky top-0">
           {siteConfig.navItems.map((item) => (
             <NavbarItem
               key={item.href}
@@ -37,16 +42,12 @@ export const Navbar = () => {
                   "bg-[#7B765E12] shadow-[inset_2px_6px_4px_0px_#00000040]"
               )}
             >
-              <RouterLink
-                to={item.href}
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium text-zinc-400",
-                  location.pathname === item.href && "text-[#7B765E]"
-                )}
+              <Link
+                href={item.href}
+                className={clsx(linkStyles({ color: "foreground" }), "text-zinc-400")}
               >
                 {t(item.label)}
-              </RouterLink>
+              </Link>
             </NavbarItem>
           ))}
         </div>

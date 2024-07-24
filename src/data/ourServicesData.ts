@@ -1,37 +1,28 @@
-import one from "@/images/1.svg";
-import two from "@/images/2.svg";
-import three from "@/images/3.svg";
-import four from "@/images/4.svg";
+import one from "@/images/service-item1.svg";
+import two from "@/images/service-item2.svg";
+import three from "@/images/service-item3.svg";
+import four from "@/images/service-item4.svg";
 
 interface Item {
   icon: string;
   text: string;
-  classBefore: string;
 }
 
 export const ourServicesData: Item[] = [
   {
     icon: one,
-    text: "ServicesItems1",
-    classBefore:
-      "before:w-[170px] before:h-[2px] before:top-[50%] before:left-[-30%] before:[transform:rotate(146deg)]"
+    text: "ServicesItems1"
   },
   {
     icon: two,
-    text: "ServicesItems2",
-    classBefore:
-      "before:w-[100px] before:h-[2px] before:top-[55%] before:left-[-22%] before:[transform:rotate(170deg)]"
+    text: "ServicesItems2"
   },
   {
     icon: three,
-    text: "ServicesItems3",
-    classBefore:
-      "before:w-[100px] before:h-[2px] before:top-[15%] before:left-[-25%] before:[transform:rotate(25deg)]"
+    text: "ServicesItems3"
   },
   {
     icon: four,
-    text: "ServicesItems4",
-    classBefore:
-      "before:w-[170px] before:h-[2px] before:top-[5%] before:left-[-30%] before:[transform:rotate(45deg)]"
+    text: "ServicesItems4"
   }
 ];
