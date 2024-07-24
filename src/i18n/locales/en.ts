@@ -24,20 +24,20 @@ export const en = {
 
   // OurServicesPage
   btnConnectWithUs: "Connect with Us",
+  serviceTitle: "Service",
 
-  ServicesItems1:
+  servicesItems1:
     "Our automated systems manage your receivables and facilitate the communication and payment of your dues, ensuring unmatched accuracy and optimal results.",
-  ServicesItems2:
+  servicesItems2:
     "Our platform is continuously updated by lawyers and debt management experts, ensuring that every action taken is optimal, legally sound, and ethically impeccable.",
-  ServicesItems3:
+  servicesItems3:
     "Our management solutions, rigorously guided by specialized lawyers, ensure absolute reliability and impeccable legal compliance.",
-  ServicesItems4:
+  servicesItems4:
     "The protection of your data is our priority. Our solutions are ISO 27001 and SOC 2 Type II certified, guaranteeing the highest standards of information security and data control.",
 
   // footer
   privacyPolicy: "Privacy Policy",
-  informationOnPersonalDataProtection:
-    "Information on personal data protection",
+  informationOnPersonalDataProtection: "Information on personal data protection",
 
   // contact us
 
@@ -66,5 +66,5 @@ export const en = {
     "The direct involvement of specialized lawyers guarantees a legally impeccable approach at every stage.",
   operationalCustomization: "Operational Customization",
   operationalCustomizationDescription:
-    "Our agile processes adapt to the specifics of your business, ensuring seamless integration and optimal responsiveness to changes in your business environment. We continuously optimize our methods to meet your evolving needs, ensuring maximum efficiency and constant relevance of our services.",
+    "Our agile processes adapt to the specifics of your business, ensuring seamless integration and optimal responsiveness to changes in your business environment. We continuously optimize our methods to meet your evolving needs, ensuring maximum efficiency and constant relevance of our services."
 };

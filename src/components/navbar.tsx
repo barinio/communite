@@ -21,7 +21,7 @@ export const Navbar = () => {
     <NextUINavbar
       maxWidth="sm"
       // backdrop-blur-none
-      className="bg-background-transparent sm:max-w-80 max-h-screen [&>header]:p-0 [&>header]:h-full sm:sticky absolute "
+      className="w-auto md:w-full bg-background-transparent md:max-w-80 max-h-screen [&>header]:p-0 [&>header]:h-full sm:sticky absolute "
       classNames={{
         item: [
           "data-[active=true]:text-primary",
@@ -37,7 +37,7 @@ export const Navbar = () => {
             <NavbarItem
               key={item.href}
               className={clsx(
-                "flex-1 flex [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full px-6",
+                "hover:bg-[#7B765E12] flex-1 flex [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full px-3 md:px-6",
                 location.pathname === item.href &&
                   "bg-[#7B765E12] shadow-[inset_2px_6px_4px_0px_#00000040]"
               )}
@@ -66,14 +66,16 @@ export const Navbar = () => {
             {siteConfig.navItems.map((item) => (
               <NavbarItem
                 key={item.href}
-                className="flex-1 flex [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full"
+                className={clsx(
+                  "flex-1 flex bg-[#09090B] [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full",
+                  location.pathname === item.href &&
+                    "bg-[#7B765E12] shadow-[inset_2px_6px_4px_0px_#00000040]"
+                )}
               >
                 <Link
                   className={clsx(
-                    linkStyles({ color: "foreground" }),
-                    "data-[active=true]:text-primary data-[active=true]:font-medium"
+                    "text-zinc-400 data-[active=true]:text-primary data-[active=true]:font-medium"
                   )}
-                  color="foreground"
                   href={item.href}
                 >
                   {t(`${item.label}`)}
@@ -81,7 +83,7 @@ export const Navbar = () => {
               </NavbarItem>
             ))}
 
-            <NavbarItem className="flex-1 flex [&:not(:last-child)]:border-b-1 border-[#20272C] justify-center w-full">
+            <NavbarItem className="flex-1 flex [&:not(:last-child)]:border-b-1 bg-[#09090B] border-[#20272C] justify-center w-full">
               <Link
                 className="flex flex-1 justify-center items-center gap-1 text-current sm:mr-20 "
                 href=""
@@ -91,7 +93,7 @@ export const Navbar = () => {
             </NavbarItem>
 
             <Link
-              className="flex flex-1 justify-center items-center gap-1 text-current"
+              className="flex flex-1 justify-center items-center gap-1 text-current bg-[#09090B]"
               underline="always"
               href=""
             >

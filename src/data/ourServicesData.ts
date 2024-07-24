@@ -11,18 +11,18 @@ interface Item {
 export const ourServicesData: Item[] = [
   {
     icon: one,
-    text: "ServicesItems1"
+    text: "servicesItems1"
   },
   {
     icon: two,
-    text: "ServicesItems2"
+    text: "servicesItems2"
   },
   {
     icon: three,
-    text: "ServicesItems3"
+    text: "servicesItems3"
   },
   {
     icon: four,
-    text: "ServicesItems4"
+    text: "servicesItems4"
   }
 ];

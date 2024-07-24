@@ -24,6 +24,8 @@ export const fr = {
 
   // OurServicesPage
   btnConnectWithUs: "Connecté-nous",
+  serviceTitle: "Service",
+
   ServicesItems1:
     "Nos systèmes automatisés gèrent vos créances et facilitent la communication et le paiement de vos recevables, garantissant une précision inégalée et des résultats optimaux",
   ServicesItems2:
@@ -64,5 +66,5 @@ export const fr = {
     "L'implication directe d'avocats spécialisés garantit une approche légalement irréprochable à chaque étape.",
   operationalCustomization: "Personnalisation Opérationnelle",
   operationalCustomizationDescription:
-    "Nos processus agiles s'adaptent aux spécificités de votre entreprise, assurant une intégration fluide et une réactivité optimale face aux évolutions de votre environnement d'affaires. Nous optimisons continuellement nos méthodes pour répondre à vos besoins évolutifs, assurant ainsi une efficacité maximale et une pertinence constante de nos services.",
+    "Nos processus agiles s'adaptent aux spécificités de votre entreprise, assurant une intégration fluide et une réactivité optimale face aux évolutions de votre environnement d'affaires. Nous optimisons continuellement nos méthodes pour répondre à vos besoins évolutifs, assurant ainsi une efficacité maximale et une pertinence constante de nos services."
 };
