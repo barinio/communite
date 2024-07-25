@@ -1,3 +1,9 @@
+import instagram from "@/images/instagram.svg";
+import whatsapp from "@/images/whatsapp.svg";
+import twitter from "@/images/twitter.svg";
+import youtube from "@/images/youtube.svg";
+import github from "@/images/github.svg";
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -26,44 +32,40 @@ export const siteConfig = {
     }
   ],
   navMenuItems: [
-    // {
-    //   label: "Profile",
-    //   href: "/profile"
-    // },
-    // {
-    //   label: "Dashboard",
-    //   href: "/dashboard"
-    // },
-    // {
-    //   label: "Projects",
-    //   href: "/projects"
-    // },
-    // {
-    //   label: "Team",
-    //   href: "/team"
-    // },
-    // {
-    //   label: "Calendar",
-    //   href: "/calendar"
-    // },
-    // {
-    //   label: "Settings",
-    //   href: "/settings"
-    // },
-    // {
-    //   label: "Help & Feedback",
-    //   href: "/help-feedback"
-    // },
-    // {
-    //   label: "Logout",
-    //   href: "/logout"
-    // }
+    {
+      label: "welcome",
+      href: "/welcome"
+    },
+    {
+      label: "ourServices",
+      href: "/our-services"
+    },
+    {
+      label: "ourMethodology",
+      href: "/our-methodology"
+    },
+    {
+      label: "contactUs",
+      href: "/contact-us"
+    },
+    {
+      label: "advantagesOfCoMUniti",
+      href: "/advantages-of-comuniti"
+    },
+    {
+      label: "privacyPolicy",
+      href: "/privacy-policy"
+    },
+    {
+      label: "informationOnPersonalDataProtection",
+      href: "/privacy-information"
+    }
   ],
-  links: {
-    // github: "https://github.com/nextui-org/nextui",
-    // twitter: "https://twitter.com/getnextui",
-    // docs: "https://nextui-docs-v2.vercel.app",
-    // discord: "https://discord.gg/9b6yyZKmH4",
-    // sponsor: "https://patreon.com/jrgarciadev"
-  }
+  links: [
+    { key: "instagram", linkPath: "https://www.instagram.com/", socialImg: instagram },
+    { key: "whatsapp", linkPath: "https://www.whatsapp.com/", socialImg: whatsapp },
+    { key: "twitter", linkPath: "https://x.com/?lang=en", socialImg: twitter },
+    { key: "youtube", linkPath: "https://www.youtube.com/", socialImg: youtube },
+    { key: "github", linkPath: "https://github.com/", socialImg: github }
+  ]
 };

@@ -11,10 +11,10 @@ import lightIconDropDown from "@/images/light-icon-drop-down.svg";
 import darkIconDropDown from "@/images/dark-icon-drop-down.svg";
 import logoDark from "@/images/logo-dark.svg";
 import logoLight from "@/images/logo-light.svg";
-import { socialLinkData } from "@/data/socialLinkData";
 import { ThemeSwitch } from "@/components/theme-switch";
 import SwitcherLanguage from "@/i18n/SwitcherLanguage";
 import useDarkMode from "@/hooks/useDarkMode";
+import { siteConfig } from "@/config/site";
 
 const SwitcherBar = () => {
   const isDark = useDarkMode();
@@ -44,7 +44,7 @@ const SwitcherBar = () => {
         </DropdownTrigger>
 
         <DropdownMenu aria-label="Static Actions" className="flex flex-col">
-          {socialLinkData.map(({ key, linkPath, socialImg }) => (
+          {siteConfig.links.map(({ key, linkPath, socialImg }) => (
             <DropdownItem
               key={key}
               textValue="social"
