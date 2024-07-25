@@ -12,7 +12,7 @@ export default function OurServicesPage() {
 
   return (
     <DefaultLayout>
-      <section className="w-[390px] md:w-auto flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
+      <section className="w-[390px] md:w-auto flex flex-col items-center justify-center gap-4 pt-10 pb-20 ">
         <div className="flex flex-col xl:flex-row items-center md:pr-28 gap-16">
           <div className="fist-part flex flex-col items-center">
             <div className="flex flex-col sm:flex-row relative">

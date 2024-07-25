@@ -45,7 +45,7 @@ export const Navbar = () => {
                 href={item.href}
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "font-medium dark:text-zinc-400"
+                  "w-full h-full justify-center font-medium dark:text-zinc-400"
                 )}
               >
                 {t(item.label)}
