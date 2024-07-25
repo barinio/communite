@@ -26,13 +26,13 @@ export const fr = {
   btnConnectWithUs: "Connecté-nous",
   serviceTitle: "Service",
 
-  ServicesItems1:
+  servicesItems1:
     "Nos systèmes automatisés gèrent vos créances et facilitent la communication et le paiement de vos recevables, garantissant une précision inégalée et des résultats optimaux",
-  ServicesItems2:
+  servicesItems2:
     "Notre plateforme est continuellement mise à jour par des avocats et des experts en gestion de créances, assurant que chaque action entreprise est optimale, légalement fondée et éthiquement irréprochable.",
-  ServicesItems3:
+  servicesItems3:
     "Nos solutions de gestion, rigoureusement encadrées par des avocats spécialisés, assurent une fiabilité absolue et une conformité légale irréprochable.",
-  ServicesItems4:
+  servicesItems4:
     "La protection de vos données est notre priorité. Nos solutions sont certifiées ISO 27001 et SOC 2 Type II, garantissant les plus hauts standards de sécurité de l'information et de contrôle des données.",
 
   // PrivacyInformation
