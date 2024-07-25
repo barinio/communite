@@ -19,7 +19,7 @@ const Footer = () => {
         className="w-[292px] sm:max-w-[505px] flex flex-1 sm:inline-block justify-center items-center gap-1 text-current"
         href="/privacy-information"
       >
-        <p className="font-medium leading-8 uppercase dark:text-zinc-400 dark:opacity-50 sm:text-sm">
+        <p className="font-medium leading-8 dark:text-zinc-400 dark:opacity-50 sm:text-sm">
           {t("informationOnPersonalDataProtection")}
         </p>
       </Link>
