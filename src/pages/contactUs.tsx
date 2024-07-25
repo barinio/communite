@@ -78,7 +78,7 @@ export default function ContactUsPage() {
 
             <Textarea
               classNames={{
-                input: "min-h-32 md:min-h-48",
+                input: "min-h-32 md:min-h-48 ",
               }}
               minRows={6}
               placeholder={t("inputCom")}
@@ -89,11 +89,10 @@ export default function ContactUsPage() {
           </form>
         </Card>
         <Button
-          className="min-w-44 mb-11 md:mb-0"
+          className="min-w-44 mb-11 md:mb-0 text-xl font-bold text-[#1F1D15]  bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
           onPress={handleSubmit}
           type="submit"
           size="lg"
-          style={{ backgroundColor: "#AD8E20" }}
         >
           {t("contactBtn1")}
         </Button>

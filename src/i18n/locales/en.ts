@@ -45,7 +45,7 @@ export const en = {
   inputMail: "E-mail",
   inputTel: "Telephone",
   inputCom: "Comments",
-  contactBtn1: "Send",
+  contactBtn1: "SEND",
 
   // Our Methodology
   methodologyTitle: "Our Competitive Advantage",
@@ -67,4 +67,7 @@ export const en = {
   operationalCustomization: "Operational Customization",
   operationalCustomizationDescription:
     "Our agile processes adapt to the specifics of your business, ensuring seamless integration and optimal responsiveness to changes in your business environment. We continuously optimize our methods to meet your evolving needs, ensuring maximum efficiency and constant relevance of our services.",
+
+  // Advantages of Communiti
+  advantagesCommunitiTitle: "Advantages of Communiti",
 };
