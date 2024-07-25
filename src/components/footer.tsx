@@ -10,15 +10,16 @@ const Footer = () => {
         className="flex flex-1 sm:max-w-[180px] justify-center items-center gap-1 text-current sm:mr-20 "
         href="/privacy-policy"
       >
-        <p className="text-zinc-400 opacity-50 text-sm">{t("privacyPolicy")}</p>
+        <p className="font-medium dark:text-zinc-400 dark:opacity-50 text-sm">
+          {t("privacyPolicy")}
+        </p>
       </Link>
 
       <Link
         className="w-[292px] sm:max-w-[505px] flex flex-1 sm:inline-block justify-center items-center gap-1 text-current"
-        underline="always"
         href="/privacy-information"
       >
-        <p className=" leading-8 uppercase text-zinc-400 opacity-50 sm:text-sm">
+        <p className="font-medium leading-8 uppercase dark:text-zinc-400 dark:opacity-50 sm:text-sm">
           {t("informationOnPersonalDataProtection")}
         </p>
       </Link>
