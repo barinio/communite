@@ -86,7 +86,7 @@ export const Navbar = () => {
             <NavbarItem className="flex-1 flex [&:not(:last-child)]:border-b-1 bg-[#09090B] border-[#20272C] justify-center w-full">
               <Link
                 className="flex flex-1 justify-center items-center gap-1 text-current sm:mr-20 "
-                href=""
+                href="/privacy-policy"
               >
                 <p className="text-zinc-400 opacity-50 text-xl">{t("privacyPolicy")}</p>
               </Link>
@@ -95,7 +95,7 @@ export const Navbar = () => {
             <Link
               className="flex flex-1 justify-center items-center gap-1 text-current bg-[#09090B]"
               underline="always"
-              href=""
+              href="/privacy-information"
             >
               <p className="w-[292px] text-center leading-8 uppercase text-zinc-400 opacity-50 sm:text-xl">
                 {t("informationOnPersonalDataProtection")}
