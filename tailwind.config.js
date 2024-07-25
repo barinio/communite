@@ -11,6 +11,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        desktop: "1440px"
+        // => @media (min-width: 1440px) { ... }
+      },
       colors: {
         "dark-background": "#09090B"
       }

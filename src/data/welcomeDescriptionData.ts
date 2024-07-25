@@ -1,6 +1,6 @@
 export const welcomeDescriptionData = [
   {
-    title: "contactUsBtn",
+    title: "intelligentDebtManagement",
     description: "intelligentDebtManagementDescription"
   },
   {
