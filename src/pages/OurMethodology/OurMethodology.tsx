@@ -30,7 +30,7 @@ const OurMethodologyPage = () => {
               className="max-w-lg w-[245px] sm:w-full sm:mb-5"
               src={metodologyImg}
             />
-            <p className="hidden sm:inline-block sm:w-[504px]">
+            <p className="hidden text-[#A1A1AA] sm:inline-block sm:w-[504px]">
               {t("methodologyText")}
             </p>
             <Button
