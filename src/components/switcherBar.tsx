@@ -4,7 +4,8 @@ import {
   DropdownMenu,
   Button,
   DropdownItem,
-  Link
+  Link,
+  Navbar
 } from "@nextui-org/react";
 
 import lightIconDropDown from "@/images/light-icon-drop-down.svg";
@@ -20,7 +21,10 @@ const SwitcherBar = () => {
   const isDark = useDarkMode();
 
   return (
-    <div className="hidden sm:flex justify-end w-[390px] md:w-full gap-6 pr-5 pt-8 md:pt-10">
+    <Navbar
+      shouldHideOnScroll
+      className="hidden sm:flex justify-end w-full gap-6 pr-5 md:bg-transparent [&>header]:justify-end"
+    >
       <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
         <img src={isDark ? logoDark : logoLight} alt="logo-commUnite" />
       </Link>
@@ -57,7 +61,7 @@ const SwitcherBar = () => {
           ))}
         </DropdownMenu>
       </Dropdown>
-    </div>
+    </Navbar>
   );
 };
 
