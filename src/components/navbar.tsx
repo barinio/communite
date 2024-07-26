@@ -20,7 +20,7 @@ export const Navbar = () => {
   return (
     <NextUINavbar
       maxWidth="sm"
-      className="backdrop-blur-none w-auto md:w-full bg-background-transparent md:max-w-80 max-h-screen [&>header]:p-0 [&>header]:h-full sm:sticky fixed top-6 right-6 sm:top-0 sm:right-0"
+      className="backdrop-saturate-100 backdrop-blur-none data-[menu-open=true]:backdrop-blur-none w-auto lg:w-full bg-background-transparent max-w-full sm:max-w-60 w4k:max-w-80 max-h-screen [&>header]:p-0 [&>header]:h-full sm:sticky fixed top-6 right-6 sm:top-0 sm:right-0"
       classNames={{
         item: [
           "data-[active=true]:text-primary",
@@ -45,7 +45,7 @@ export const Navbar = () => {
                 href={item.href}
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "w-full h-full justify-center font-medium dark:text-zinc-400"
+                  "w-full h-full justify-center font-medium dark:text-zinc-400  w4k:text-3xl"
                 )}
               >
                 {t(item.label)}
