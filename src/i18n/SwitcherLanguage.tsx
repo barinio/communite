@@ -21,9 +21,9 @@ const SwitcherLanguage = () => {
       radius="none"
       variant="faded"
       onClick={handleLanguageChange}
-      className="uppercase px-1 min-w-8 text-lg font-medium h-9 rounded-none dark:bg-[#1D1D1F] dark:border-[#424245]"
+      className="uppercase w4k:h-[40px] w4k:w-[40px] px-1 min-w-8 text-lg font-medium h-9 rounded-none dark:bg-[#1D1D1F] dark:border-[#424245]"
     >
-      {currentLanguage === LOCALS.EN ? LOCALS.EN : LOCALS.FR}
+      {currentLanguage === LOCALS.EN ? "EN" : "FR"}
     </Button>
   );
 };
