@@ -7,14 +7,22 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
     "before:content-[''] before:absolute xl:before:w-[750px] before:h-[550px] before:left-[50px] before:top-[-150px] before:rounded-full before:bg-gradient-to-b before:from-[#AC962244] before:to-[#44490600] before:blur-[100px] ";
 
   return (
-    <div className="container mx-auto max-w-[1440px] px-2 xl:px-6 flex">
+    <div className=" w4k:w-full container mx-auto w4k:mx-0 w4k:max-w-full w4k:h-full w4k:min-h-screen px-2 xl:px-6 flex">
       <Navbar />
 
       <div className={`relative flex-1 flex flex-col ${beforeElipsStyles}`}>
         <SwitcherBar />
-        <main className="m-auto w-[390px] md:w-full">{children}</main>
 
-        <footer className="w-[390px] md:w-full hidden sm:flex items-center justify-center py-3">
+        <main className="m-auto w-[390px] md:w-full">
+          <section className="w-[390px] md:w-auto flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
+            {/* md:pl-12 lg:pr-28 */}
+            <div className="w4k:w-full w4k:flex-1 flex flex-col xl:flex-row items-center pl-0   pr-5  gap-6">
+              {children}
+            </div>
+          </section>
+        </main>
+
+        <footer className="w4k:pl-40 w4k:gap-20 mx-auto w4k:mt-10 gap-5 md:pl-10 lg:gap-5 w-[390px] md:w-full hidden sm:flex items-center justify-center py-3">
           <Footer />
         </footer>
       </div>

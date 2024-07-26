@@ -4,7 +4,7 @@ export const en = {
   ourServices: "Our Services",
   ourMethodology: "Our Methodology",
   contactUs: "Contact Us",
-  advantagesOfCoMUniti: "Advantages of CoMUniti",
+  advantages: "Advantages",
 
   // welcome page
   ourExpertise: "Our Expertise",

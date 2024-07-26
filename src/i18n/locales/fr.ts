@@ -4,7 +4,7 @@ export const fr = {
   ourServices: "Nos Services",
   ourMethodology: "Notre Méthodologie",
   contactUs: "Nous Joindre",
-  advantagesOfCoMUniti: "Avantages CommUnite",
+  advantages: "Avantages",
 
   // welcome page
   ourExpertise: "Notre Expertise",

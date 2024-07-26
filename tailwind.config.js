@@ -12,8 +12,12 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        desktop: "1440px"
+        desktop: "1440px",
         // => @media (min-width: 1440px) { ... }
+        w4k: "1536px",
+        // => @media (min-width: 1536px) { ... }
+        w4k2: "1720px"
+        // => @media (min-width: 1720px) { ... }
       },
       colors: {
         "dark-background": "#09090B"

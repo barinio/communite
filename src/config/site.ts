@@ -27,7 +27,7 @@ export const siteConfig = {
       href: "/contact-us"
     },
     {
-      label: "advantagesOfCoMUniti",
+      label: "advantages",
       href: "/advantages-of-comuniti"
     }
   ],
@@ -49,7 +49,7 @@ export const siteConfig = {
       href: "/contact-us"
     },
     {
-      label: "advantagesOfCoMUniti",
+      label: "advantages",
       href: "/advantages-of-comuniti"
     },
     {
