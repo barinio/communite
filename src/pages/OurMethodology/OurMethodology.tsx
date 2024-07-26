@@ -1,7 +1,7 @@
 import { Button, Image } from "@nextui-org/react";
 import { useTranslation } from "react-i18next";
 
-import metodologyImg from "../../images/metodology-img.png";
+import metodologyImg from "../../images/metodology-img.svg";
 import { dataMethodology } from "../../data/methodologyData";
 
 import MethodologyList from "./MethodologyList";
@@ -18,7 +18,7 @@ const OurMethodologyPage = () => {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="main-content flex flex-col xl:flex-row items-center sm:pl-12 sm:pr-10 gap-6 sm:gap-28">
+        <div className="main-content flex flex-col xl:flex-row items-center pl-12 pr-12 gap-6 sm:gap-28">
           <div className="first-part xl:order-2 flex flex-col items-center">
             <h1 className="text-3xl font-extrabold text-center text-[#FDAB0C] mb-2 mt-5 sm:mt-0">
               {t("methodologyTitle")}
@@ -30,7 +30,7 @@ const OurMethodologyPage = () => {
               className="max-w-lg w-[245px] sm:w-full sm:mb-5"
               src={metodologyImg}
             />
-            <p className="hidden text-[#A1A1AA] sm:inline-block sm:w-[504px]">
+            <p className="hidden text-[#A1A1AA] sm:inline-block sm:w-[390px] lg:w-[504px]">
               {t("methodologyText")}
             </p>
             <Button
