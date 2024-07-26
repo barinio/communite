@@ -53,88 +53,84 @@ export default function ContactUsPage() {
 
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit}
-        >
-          {({ errors, touched, isSubmitting }) => (
-            <Form className="flex flex-col items-center w-full h-full">
-              <Card className="p-6 w-full mb-12 md:p-11 sm:w-[80%] lg:w-[696px] mt-16 ">
-                <div className="mb-7">
-                  <Field
-                    name="username"
-                    type="text"
-                    placeholder={t("inputName")}
-                    className={`w-full  h-11 p-2 rounded-xl bg-[#38383b]/50 border-[#27272A] ${
-                      errors.username && touched.username
-                        ? "border-red-500"
-                        : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="username"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
-                </div>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        {({ errors, touched, isSubmitting }) => (
+          <Form className="flex flex-col items-center w-full h-full">
+            <Card className="p-6 w-full mb-12 sm:w-[400px] lg:w-[696px] mt-16 ">
+              <div className="mb-7">
+                <Field
+                  name="username"
+                  type="text"
+                  placeholder={t("inputName")}
+                  className={`w-full  h-11 p-2 rounded-xl bg-[#38383b]/50 border-[#27272A] ${
+                    errors.username && touched.username ? "border-red-500" : ""
+                  }`}
+                />
+                <ErrorMessage
+                  name="username"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
 
-                <div className="mb-7">
-                  <Field
-                    name="email"
-                    type="email"
-                    placeholder={t("inputMail")}
-                    className={`w-full h-11 p-2 rounded-xl bg-[#38383b]/50 border-[#27272A] ${
-                      errors.email && touched.email ? "border-red-500" : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="email"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
-                </div>
+              <div className="mb-7">
+                <Field
+                  name="email"
+                  type="email"
+                  placeholder={t("inputMail")}
+                  className={`w-full h-11 p-2 rounded-xl bg-[#38383b]/50 border-[#27272A] ${
+                    errors.email && touched.email ? "border-red-500" : ""
+                  }`}
+                />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
 
-                <div className="mb-12">
-                  <Field
-                    name="telephone"
-                    type="tel"
-                    placeholder={t("inputTel")}
-                    className={`w-full h-11 p-2 rounded-xl bg-[#38383b]/50 border-[#27272A] ${
-                      errors.telephone && touched.telephone
-                        ? "border-red-500"
-                        : ""
-                    }`}
-                  />
-                  <ErrorMessage
-                    name="telephone"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
-                </div>
+              <div className="mb-12">
+                <Field
+                  name="telephone"
+                  type="tel"
+                  placeholder={t("inputTel")}
+                  className={`w-full h-11 p-2 rounded-xl bg-[#38383b]/50 border-[#27272A] ${
+                    errors.telephone && touched.telephone
+                      ? "border-red-500"
+                      : ""
+                  }`}
+                />
+                <ErrorMessage
+                  name="telephone"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
+              </div>
 
-                <div className="">
-                  <Field
-                    as="textarea"
-                    name="comments"
-                    placeholder={t("inputCom")}
-                    className={`w-full p-2  bg-[#38383b]/50 border-[#27272A] rounded-xl min-h-44 `}
-                  />
-                </div>
-              </Card>
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className=" min-w-44 mb-11 md:mb-0 text-xl font-bold uppercase text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
-                size="lg"
-              >
-                {t("contactBtn1")}
-              </Button>
-            </Form>
-          )}
-        </Formik>
-      </section>
+              <div className="">
+                <Field
+                  as="textarea"
+                  name="comments"
+                  placeholder={t("inputCom")}
+                  className={`w-full p-2  bg-[#38383b]/50 border-[#27272A] rounded-xl min-h-44 `}
+                />
+              </div>
+            </Card>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className=" min-w-44 mb-11 md:mb-0 text-xl font-bold uppercase text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
+              size="lg"
+            >
+              {t("contactBtn1")}
+            </Button>
+          </Form>
+        )}
+      </Formik>
     </DefaultLayout>
   );
 }
