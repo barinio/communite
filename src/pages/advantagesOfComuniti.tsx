@@ -1,7 +1,7 @@
 import { Button, Image } from "@nextui-org/react";
 import { useTranslation } from "react-i18next";
 
-import metodologyImg from "../images/advantages-of-comuniti.png";
+import metodologyImg from "../images/advantages-of-comuniti.svg";
 import { advantagesComunitData } from "../data/advantagesOfComData";
 
 import DefaultLayout from "@/layouts/default";

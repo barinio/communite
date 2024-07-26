@@ -36,7 +36,8 @@ export const en = {
     "The protection of your data is our priority. Our solutions are ISO 27001 and SOC 2 Type II certified, guaranteeing the highest standards of information security and data control.",
 
   // PrivacyInformation
-  privacyInformationH1: "Responsible for access to documents or protection of personal information",
+  privacyInformationH1:
+    "Responsible for access to documents or protection of personal information",
   //
 
   privacyInformationP1:
@@ -84,7 +85,7 @@ export const en = {
   inputMail: "E-mail",
   inputTel: "Telephone",
   inputCom: "Comments",
-  contactBtn1: "SEND",
+  contactBtn1: "Send",
 
   // Our Methodology
   methodologyTitle: "Our Competitive Advantage",
@@ -112,5 +113,6 @@ export const en = {
 
   // footer
   privacyPolicy: "Privacy Policy",
-  informationOnPersonalDataProtection: "Information on personal data protection"
+  informationOnPersonalDataProtection:
+    "Information on personal data protection",
 };
