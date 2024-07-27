@@ -15,7 +15,7 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
         <SwitcherBar />
 
         <main className="m-auto w-[390px] md:w-full">
-          <section className="w-[390px] md:w-auto flex flex-col items-center justify-center gap-4 py-8 md:py-10 ">
+          <section className="w-[390px] md:w-auto flex flex-col items-center justify-center gap-4 py-10 md:py-5 ">
             {/* md:pl-12 lg:pr-28 */}
             <div className="w4k:w-full w4k:flex-1 flex flex-col xl:flex-row items-center pl-0   pr-5  gap-6">
               {children}
@@ -23,7 +23,7 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
           </section>
         </main>
 
-        <footer className="w4k:pl-40 w4k:gap-20 mx-auto w4k:mt-10 gap-5 md:pl-10 lg:gap-5 w-[390px] md:w-full hidden sm:flex items-center justify-center py-3">
+        <footer className=" w4k:gap-20 mx-auto w4k:mt-10 gap-5 md:pl-10 lg:gap-10 w-[390px] md:w-full hidden sm:flex items-center justify-center py-3">
           <Footer />
         </footer>
       </div>

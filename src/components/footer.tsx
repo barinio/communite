@@ -7,19 +7,19 @@ const Footer = () => {
   return (
     <>
       <Link
-        className="w4k:max-w-[200px] flex w-full sm:max-w-[180px] justify-center items-center text-current"
+        className=" lg:max-w-[600px] lg:w-auto flex w-full sm:max-w-[180px] justify-center items-center text-current"
         href="/privacy-policy"
       >
-        <p className="w4k:text-3xl font-medium dark:text-zinc-400 dark:opacity-50 text-base">
+        <p className="w4k:text-2xl font-medium dark:text-zinc-400 dark:opacity-50 text-base">
           {t("privacyPolicy")}
         </p>
       </Link>
 
       <Link
-        className="sm:max-w-[350px] w4k:max-w-[600px] flex w-full justify-center items-center gap-1 text-current"
+        className="sm:max-w-[350px] lg:max-w-[900px] lg:w-auto flex w-full justify-center items-center gap-1 text-current"
         href="/privacy-information"
       >
-        <p className="w4k:text-3xl sm:max-w-[350px]  lg:max-w-[600px] font-medium leading-8 dark:text-zinc-400 dark:opacity-50 sm:text-base">
+        <p className="w4k:text-2xl sm:max-w-[350px] lg:max-w-[900px] lg:w-auto font-medium leading-8 dark:text-zinc-400 dark:opacity-50 sm:text-base">
           {t("informationOnPersonalDataProtection")}
         </p>
       </Link>
