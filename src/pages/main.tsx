@@ -6,11 +6,7 @@ export default function MainPage() {
   return (
     <section className="bg-zinc-950 min-h-screen h-full flex items-center justify-center">
       <div className="relative max-w-[1440px] flex items-center ">
-        <img
-          src={mainBgImg}
-          alt="home-bg-img"
-          className="opacity-5 absolute top-[-55px] right-[-15px]"
-        />
+        <img src={mainBgImg} alt="home-bg-img" className="opacity-5 absolute top-[-55px] right-0" />
         <div className="h-full max-w-[1300px] text-center flex flex-col items-center justify-center m-auto gap-4 p-6 md:p-8">
           <h1 className="sm:text-7xl text-5xl sm:leading-relaxed leading-relaxed font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 mb-8">
             СommUnity
