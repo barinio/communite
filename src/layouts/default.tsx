@@ -23,7 +23,7 @@ export default function DefaultLayout({ children }: { children: React.ReactNode 
           </section>
         </main>
 
-        <footer className="xl:pt-0 w4k:gap-20 mx-auto w4k:mt-10 gap-5 md:pl-10 lg:gap-10 w-[390px] md:w-full hidden sm:flex items-center justify-center py-3">
+        <footer className="xl:pt-0 w4k:gap-20 mx-auto gap-5 md:pl-10 lg:gap-10 w-[390px] md:w-full hidden sm:flex items-center justify-center py-3">
           <Footer />
         </footer>
       </div>

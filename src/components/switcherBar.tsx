@@ -23,7 +23,7 @@ const SwitcherBar = () => {
   return (
     <Navbar
       shouldHideOnScroll
-      className="backdrop-saturate-100 [&>header]:w4k:gap-8 [&>header]:p-0 [&>header]:w4k:h-[120px] hidden sm:flex justify-end w-full gap-6 pr-5 md:bg-transparent [&>header]:justify-end"
+      className="backdrop-saturate-100 [&>header]:w4k:gap-8 [&>header]:p-0 [&>header]:w4k:pt-4 hidden sm:flex justify-end w-full gap-6 pr-5 md:bg-transparent [&>header]:justify-end"
     >
       <Link className="flex justify-start items-center gap-1" color="foreground" href="/">
         <img src={isDark ? logoDark : logoLight} alt="logo-commUnite" className="w4k:h-[40px]" />
