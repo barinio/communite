@@ -16,12 +16,10 @@ const validationSchema = Yup.object().shape({
     .min(2, "User name must be at least 2 characters")
     .max(60, "User name must be at most 64 characters")
     .required("User name is required"),
-  email: Yup.string()
-    .required("Email is required")
-    .matches(emailRegExp, "Invalid email address"),
+  email: Yup.string().required("Email is required").matches(emailRegExp, "Invalid email address"),
   telephone: Yup.string()
     .required("Phone number is required")
-    .matches(phoneRegExp, "+XX (XXX) XXX - XX - XX"),
+    .matches(phoneRegExp, "+XX (XXX) XXX - XX - XX")
 });
 
 interface FormValues {
@@ -38,13 +36,10 @@ export default function ContactUsPage() {
     username: "",
     email: "",
     telephone: "",
-    comments: "",
+    comments: ""
   };
 
-  const handleSubmit = (
-    values: FormValues,
-    { setSubmitting, resetForm }: any
-  ) => {
+  const handleSubmit = (values: FormValues, { setSubmitting, resetForm }: any) => {
     console.log("Form submitted:", values);
     // Здесь код для отправки формы
     setSubmitting(false);
@@ -60,7 +55,7 @@ export default function ContactUsPage() {
       >
         {({ errors, touched, isSubmitting }) => (
           <Form className="flex flex-col items-center w-full h-full">
-            <Card className="p-6 w-full mb-12 sm:w-[400px] lg:w-[696px] mt-16 ">
+            <Card className="p-6 w-full mb-12 sm:w-[400px] lg:w-[696px]">
               <div className="mb-7">
                 <Field
                   name="username"
@@ -86,11 +81,7 @@ export default function ContactUsPage() {
                     errors.email && touched.email ? "border-red-500" : ""
                   }`}
                 />
-                <ErrorMessage
-                  name="email"
-                  component="div"
-                  className="text-red-500 text-sm mt-1"
-                />
+                <ErrorMessage name="email" component="div" className="text-red-500 text-sm mt-1" />
               </div>
 
               <div className="mb-12">
@@ -99,9 +90,7 @@ export default function ContactUsPage() {
                   type="tel"
                   placeholder={t("inputTel")}
                   className={`w-full h-11 p-2 rounded-xl bg-[#38383b]/50 border-[#27272A] ${
-                    errors.telephone && touched.telephone
-                      ? "border-red-500"
-                      : ""
+                    errors.telephone && touched.telephone ? "border-red-500" : ""
                   }`}
                 />
                 <ErrorMessage

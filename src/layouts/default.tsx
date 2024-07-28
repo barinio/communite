@@ -2,17 +2,13 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
 import SwitcherBar from "@/components/switcherBar";
 
-export default function DefaultLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function DefaultLayout({ children }: { children: React.ReactNode }) {
   const beforeElipsStyles =
     "before:content-[''] before:absolute xl:before:w-[750px] before:h-[550px] before:left-[50px] before:top-[-150px] before:rounded-full before:bg-gradient-to-b before:from-[#AC962244] before:to-[#44490600] before:blur-[100px] ";
 
   return (
     // container px-2 xl:px-6
-    <div className=" w4k:w-full  w4k:mx-0 w4k:max-w-full w4k:h-full w4k:min-h-screen flex">
+    <div className=" w4k:w-full w4k:mx-0 w4k:max-w-full h-full min-h-screen flex">
       <Navbar />
 
       <div className={`relative flex-1 flex flex-col ${beforeElipsStyles}`}>
