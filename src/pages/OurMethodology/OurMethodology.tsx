@@ -17,7 +17,7 @@ const OurMethodologyPage = () => {
 
   return (
     <DefaultLayout>
-      <div className="main-content flex flex-col xl:flex-row items-center gap-6 sm:gap-20">
+      <div className="main-content w4k:w-full justify-center flex flex-col xl:flex-row items-center gap-6 sm:gap-20 w4k:gap-40">
         <div className="first-part xl:order-2 flex flex-col items-center">
           <h1 className="text-3xl font-extrabold text-center text-[#FDAB0C] mb-2 mt-5 sm:mt-0">
             {t("methodologyTitle")}
@@ -43,7 +43,7 @@ const OurMethodologyPage = () => {
         </div>
 
         <div className="second-part xl:order-1 flex flex-col">
-          <ul className="flex flex-col items-center justify-center gap-3 sm:mb-0 sm:mt-3">
+          <ul className="flex flex-col items-center justify-center gap-3  sm:mb-0 ">
             {dataMethodology.map((item) => {
               return <MethodologyList key={item.title} {...item} />;
             })}
