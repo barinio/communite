@@ -1,29 +1,7 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-
-import MainPage from "@/pages/main";
-import WelcomePage from "@/pages/welcome";
-import OurServicesPage from "@/pages/ourServices";
-import OurMethodologyPage from "@/pages/OurMethodology/OurMethodology";
-import ContactUsPage from "@/pages/contactUs";
-import AdvantagesOfCoMUnitiPage from "@/pages/advantagesOfComuniti";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import PrivacyInformation from "@/pages/PrivacyInformation";
+import { AppRouter } from "./router";
 
 function App() {
-  return (
-    <Routes>
-      <Route element={<MainPage />} path="/" />
-      <Route element={<WelcomePage />} path="/welcome" />
-      <Route element={<OurServicesPage />} path="/our-services" />
-      <Route element={<OurMethodologyPage />} path="/our-methodology" />
-      <Route element={<ContactUsPage />} path="/contact-us" />
-      <Route element={<AdvantagesOfCoMUnitiPage />} path="/advantages-of-comuniti" />
-      <Route element={<PrivacyPolicy />} path="/privacy-policy" />
-      <Route element={<PrivacyInformation />} path="/privacy-information" />
-
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  );
+  return <AppRouter />;
 }
 
 export default App;

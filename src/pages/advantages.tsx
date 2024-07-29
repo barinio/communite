@@ -1,17 +1,14 @@
-import { Button, Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import { useTranslation } from "react-i18next";
 
-import metodologyImg from "../images/advantages-of-comuniti.svg";
-import { advantagesComunitData } from "../data/advantagesOfComData";
+import metodologyImg from "../images/advantages.svg";
+import { advantagesData } from "../data/advantagesData";
 
 import DefaultLayout from "@/layouts/default";
+import ConnectButton from "@/components/ConnectButton";
 
-export default function AdvantagesOfCoMUnitiPage() {
+export default function Advantages() {
   const { t } = useTranslation();
-
-  const handleClick = () => {
-    // console.log("Click button method");
-  };
 
   return (
     <DefaultLayout>
@@ -34,19 +31,12 @@ export default function AdvantagesOfCoMUnitiPage() {
           </p>
         </div>
 
-        <Button
-          className="hidden sm:flex mt-16 h-[66px] w-[273px] italic text-2xl font-extrabold text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
-          onPress={handleClick}
-          type="button"
-          radius="full"
-        >
-          {t("methodologyBtn")}
-        </Button>
+        <ConnectButton btnText="methodologyBtn" classNames="hidden sm:flex" />
       </div>
 
       <div className="second-part flex flex-col">
         <ul className="flex flex-col items-center justify-center gap-3 sm:w-[400px] md:w-[470px]  w4k:w-[600px] sm:mb-0 sm:mt-3">
-          {advantagesComunitData.map(({ id, icon, text }) => {
+          {advantagesData.map(({ id, icon, text }) => {
             return (
               <li key={id} className="flex items-center gap-6 ">
                 <Image
@@ -55,20 +45,15 @@ export default function AdvantagesOfCoMUnitiPage() {
                   className="max-w-lg w-10 "
                   src={icon}
                 />
-                <p className="p-2 text-xs w4k:text-sm font-bold text-[#A1A1AA] ">
-                  {t(`${text}`)}
-                </p>
+                <p className="p-2 text-xs w4k:text-sm font-bold text-[#A1A1AA] ">{t(`${text}`)}</p>
               </li>
             );
           })}
         </ul>
       </div>
-      <Button
-        radius="full"
-        className="sm:hidden flex justify-center mt-10 h-[66px] w-[273px] italic text-2xl font-extrabold text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
-      >
-        {t("methodologyBtn")}
-      </Button>
+
+      <ConnectButton btnText="methodologyBtn" classNames="sm:hidden flex" />
+
       {/* </div> */}
     </DefaultLayout>
   );
