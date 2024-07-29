@@ -76,7 +76,7 @@ export default function ContactUsPage() {
       >
         {({ errors, touched, isSubmitting }) => (
           <Form className="flex flex-col items-center w-full h-full">
-            <Card className="p-6 w-full mb-12 sm:w-[400px] lg:w-[696px] mt-16 ">
+            <Card className="p-6 w-full mb-12 sm:w-[400px] lg:w-[696px]">
               <div className="mb-7">
                 <Field
                   name="username"
