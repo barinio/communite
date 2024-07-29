@@ -11,7 +11,14 @@ const instance = axios.create({
   baseURL: "http://localhost:3003",
 });
 
-const postUserLetter = async (data) => {
+interface UserLetter {
+  username: string;
+  email: string;
+  telephone: string;
+  comments?: string;
+}
+
+const postUserLetter = async (data: UserLetter) => {
   const res = await instance.post("/letter", data);
 
   return res;
