@@ -1,11 +1,28 @@
 // import React from "react";
-
+import axios from "axios";
 import * as Yup from "yup";
 import { Card, Button } from "@nextui-org/react";
 import { useTranslation } from "react-i18next";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import DefaultLayout from "@/layouts/default";
+
+const instance = axios.create({
+  baseURL: "http://localhost:3003",
+});
+
+interface UserLetter {
+  username: string;
+  email: string;
+  telephone: string;
+  comments?: string;
+}
+
+const postUserLetter = async (data: UserLetter) => {
+  const res = await instance.post("/letter", data);
+
+  return res;
+};
 
 const phoneRegExp = /^[+]{0,1}380([0-9]{9})$/;
 const emailRegExp =
@@ -16,10 +33,12 @@ const validationSchema = Yup.object().shape({
     .min(2, "User name must be at least 2 characters")
     .max(60, "User name must be at most 64 characters")
     .required("User name is required"),
-  email: Yup.string().required("Email is required").matches(emailRegExp, "Invalid email address"),
+  email: Yup.string()
+    .required("Email is required")
+    .matches(emailRegExp, "Invalid email address"),
   telephone: Yup.string()
     .required("Phone number is required")
-    .matches(phoneRegExp, "+XX (XXX) XXX - XX - XX")
+    .matches(phoneRegExp, "+XX (XXX) XXX - XX - XX"),
 });
 
 interface FormValues {
@@ -36,14 +55,23 @@ export default function ContactUsPage() {
     username: "",
     email: "",
     telephone: "",
-    comments: ""
+    comments: "",
   };
 
-  const handleSubmit = (values: FormValues, { setSubmitting, resetForm }: any) => {
+  const handleSubmit = async (
+    values: FormValues,
+    { setSubmitting, resetForm }: any
+  ) => {
     console.log("Form submitted:", values);
-    // Здесь код для отправки формы
-    setSubmitting(false);
-    resetForm();
+
+    try {
+      await postUserLetter(values);
+    } catch (error) {
+      console.log("error:", error);
+    } finally {
+      setSubmitting(false);
+      resetForm();
+    }
   };
 
   return (
@@ -81,7 +109,11 @@ export default function ContactUsPage() {
                     errors.email && touched.email ? "border-red-500" : ""
                   }`}
                 />
-                <ErrorMessage name="email" component="div" className="text-red-500 text-sm mt-1" />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-red-500 text-sm mt-1"
+                />
               </div>
 
               <div className="mb-12">
@@ -90,7 +122,9 @@ export default function ContactUsPage() {
                   type="tel"
                   placeholder={t("inputTel")}
                   className={`w-full h-11 p-2 rounded-xl bg-[#38383b]/50 border-[#27272A] ${
-                    errors.telephone && touched.telephone ? "border-red-500" : ""
+                    errors.telephone && touched.telephone
+                      ? "border-red-500"
+                      : ""
                   }`}
                 />
                 <ErrorMessage
