@@ -6,52 +6,35 @@ import github from "@/images/github.svg";
 
 export type SiteConfig = typeof siteConfig;
 
+const baseNavItems = [
+  {
+    label: "welcome",
+    href: "/welcome"
+  },
+  {
+    label: "ourServices",
+    href: "/our-services"
+  },
+  {
+    label: "ourMethodology",
+    href: "/our-methodology"
+  },
+  {
+    label: "contactUs",
+    href: "/contact-us"
+  },
+  {
+    label: "advantages",
+    href: "/advantages"
+  }
+];
+
 export const siteConfig = {
   name: "CommUnite",
   description: "Make beautiful websites regardless of your design experience.",
-  navItems: [
-    {
-      label: "welcome",
-      href: "/welcome"
-    },
-    {
-      label: "ourServices",
-      href: "/our-services"
-    },
-    {
-      label: "ourMethodology",
-      href: "/our-methodology"
-    },
-    {
-      label: "contactUs",
-      href: "/contact-us"
-    },
-    {
-      label: "advantages",
-      href: "/advantages-of-comuniti"
-    }
-  ],
+  navItems: baseNavItems,
   navMenuItems: [
-    {
-      label: "welcome",
-      href: "/welcome"
-    },
-    {
-      label: "ourServices",
-      href: "/our-services"
-    },
-    {
-      label: "ourMethodology",
-      href: "/our-methodology"
-    },
-    {
-      label: "contactUs",
-      href: "/contact-us"
-    },
-    {
-      label: "advantages",
-      href: "/advantages-of-comuniti"
-    },
+    ...baseNavItems,
     {
       label: "privacyPolicy",
       href: "/privacy-policy"

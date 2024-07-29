@@ -1,12 +1,12 @@
 import { Button, Link } from "@nextui-org/react";
 
-import mainBgImg from "@/images/main-bg-img.png";
+import homeBgImg from "@/images/home-bg-img.png";
 
-export default function MainPage() {
+export default function HomePage() {
   return (
     <section className="bg-zinc-950 min-h-screen h-full flex items-center justify-center">
       <div className="relative max-w-[1440px] flex items-center ">
-        <img src={mainBgImg} alt="home-bg-img" className="opacity-5 absolute top-[-55px] right-0" />
+        <img src={homeBgImg} alt="home-bg-img" className="opacity-5 absolute top-[-55px] right-0" />
         <div className="h-full max-w-[1300px] text-center flex flex-col items-center justify-center m-auto gap-4 p-6 md:p-8">
           <h1 className="sm:text-7xl text-5xl sm:leading-relaxed leading-relaxed font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 mb-8">
             СommUnity
@@ -49,7 +49,7 @@ export default function MainPage() {
             <div className="relative">
               <div className="after:absolute after:content-[''] after:bg-gradient-to-r from-black from-10% via-cyan-400 via-50% to-black to-90% after:rounded-[2px] after:w-full after:h-px after:-bottom-[1px] after:left-0">
                 <Button
-                  href="https://github.com/nextui-org/nextui"
+                  href="/contact-us"
                   as={Link}
                   radius="full"
                   color="default"

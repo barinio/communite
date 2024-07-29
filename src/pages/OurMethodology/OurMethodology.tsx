@@ -1,4 +1,4 @@
-import { Button, Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import { useTranslation } from "react-i18next";
 
 import metodologyImg from "../../images/metodology-img.svg";
@@ -7,13 +7,10 @@ import { dataMethodology } from "../../data/methodologyData";
 import MethodologyList from "./MethodologyList";
 
 import DefaultLayout from "@/layouts/default";
+import ConnectButton from "@/components/ConnectButton";
 
 const OurMethodologyPage = () => {
   const { t } = useTranslation();
-
-  const handleClick = () => {
-    // console.log("Click button method");
-  };
 
   return (
     <DefaultLayout>
@@ -32,14 +29,8 @@ const OurMethodologyPage = () => {
           <p className="hidden text-[#A1A1AA] sm:inline-block sm:w-[390px] lg:w-[504px]">
             {t("methodologyText")}
           </p>
-          <Button
-            className="hidden sm:flex mt-16 h-[66px] w-[273px] italic text-2xl font-extrabold text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
-            onPress={handleClick}
-            type="button"
-            radius="full"
-          >
-            {t("methodologyBtn")}
-          </Button>
+
+          <ConnectButton btnText="methodologyBtn" classNames="hidden sm:flex" />
         </div>
 
         <div className="second-part xl:order-1 flex flex-col">
@@ -49,12 +40,8 @@ const OurMethodologyPage = () => {
             })}
           </ul>
         </div>
-        <Button
-          radius="full"
-          className="sm:hidden flex justify-center mt-10 h-[66px] w-[273px] italic text-2xl font-extrabold text-[#1F1D15] bg-gradient-to-r from-[#FBBB17] to-[#C8AD1F]"
-        >
-          {t("methodologyBtn")}
-        </Button>
+
+        <ConnectButton btnText="methodologyBtn" classNames="sm:hidden flex" />
       </div>
     </DefaultLayout>
   );

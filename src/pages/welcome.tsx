@@ -1,12 +1,11 @@
 import { useTranslation } from "react-i18next";
 
 import DefaultLayout from "@/layouts/default";
-// import WelcomeImg from "@/images/welcome-img.png";
 import WelcomeImg from "@/images/welcome-img.svg";
 import { welcomeDescriptionData } from "@/data/welcomeDescriptionData";
 import ConnectButton from "@/components/ConnectButton";
 
-export default function IndexPage() {
+export default function WelcomePage() {
   const { t } = useTranslation();
 
   return (
