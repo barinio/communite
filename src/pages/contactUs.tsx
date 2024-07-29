@@ -1,11 +1,21 @@
 // import React from "react";
-
+import axios from "axios";
 import * as Yup from "yup";
 import { Card, Button } from "@nextui-org/react";
 import { useTranslation } from "react-i18next";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import DefaultLayout from "@/layouts/default";
+
+const instance = axios.create({
+  baseURL: "http://localhost:3003",
+});
+
+const postUserLetter = async (data) => {
+  const res = await instance.post("/letter", data);
+
+  return res;
+};
 
 const phoneRegExp = /^[+]{0,1}380([0-9]{9})$/;
 const emailRegExp =
@@ -41,14 +51,20 @@ export default function ContactUsPage() {
     comments: "",
   };
 
-  const handleSubmit = (
+  const handleSubmit = async (
     values: FormValues,
     { setSubmitting, resetForm }: any
   ) => {
     console.log("Form submitted:", values);
-    // Здесь код для отправки формы
-    setSubmitting(false);
-    resetForm();
+
+    try {
+      await postUserLetter(values);
+    } catch (error) {
+      console.log("error:", error);
+    } finally {
+      setSubmitting(false);
+      resetForm();
+    }
   };
 
   return (
