@@ -1,4 +1,4 @@
-import img1 from "../images/advantages-of-comuniti.svg";
+import img1 from "../images/advantages.svg";
 
 export const advantagesData = [
   {
