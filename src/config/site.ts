@@ -3,29 +3,30 @@ import whatsapp from "@/images/whatsapp.svg";
 import twitter from "@/images/twitter.svg";
 import youtube from "@/images/youtube.svg";
 import github from "@/images/github.svg";
+import { RoutePaths } from "@/config/routeConfig/routeConfig";
 
 export type SiteConfig = typeof siteConfig;
 
 const baseNavItems = [
   {
     label: "welcome",
-    href: "/welcome"
+    href: RoutePaths.welcome
   },
   {
     label: "ourServices",
-    href: "/our-services"
+    href: RoutePaths.our_services
   },
   {
     label: "ourMethodology",
-    href: "/our-methodology"
+    href: RoutePaths.our_methodology
   },
   {
     label: "contactUs",
-    href: "/contact-us"
+    href: RoutePaths.contact_us
   },
   {
     label: "advantages",
-    href: "/advantages"
+    href: RoutePaths.advantages
   }
 ];
 
@@ -37,11 +38,11 @@ export const siteConfig = {
     ...baseNavItems,
     {
       label: "privacyPolicy",
-      href: "/privacy-policy"
+      href: RoutePaths.privacy_policy
     },
     {
       label: "informationOnPersonalDataProtection",
-      href: "/privacy-information"
+      href: RoutePaths.privacy_information
     }
   ],
   links: [

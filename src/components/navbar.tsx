@@ -9,6 +9,7 @@ import {
 import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
 import ButtonDropOpen from "./buttonDropOpen";
 
@@ -16,6 +17,7 @@ import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
   const { t } = useTranslation();
+  const location = useLocation();
 
   return (
     <NextUINavbar
