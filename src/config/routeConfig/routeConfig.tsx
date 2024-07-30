@@ -1,16 +1,15 @@
+import { lazy } from "react";
 import { RouteProps } from "react-router-dom";
 
-import HomePage from "@/pages/home";
-import WelcomePage from "@/pages/welcome";
-import OurServicesPage from "@/pages/ourServices";
-import OurMethodologyPage from "@/pages/OurMethodology/OurMethodology";
-import ContactUsPage from "@/pages/contactUs";
-import AdvantagesPage from "@/pages/advantages";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import PrivacyInformation from "@/pages/PrivacyInformation";
+const WelcomePage = lazy(() => import("@/pages/welcome"));
+const OurServicesPage = lazy(() => import("@/pages/ourServices"));
+const OurMethodologyPage = lazy(() => import("@/pages/OurMethodology/OurMethodology"));
+const ContactUsPage = lazy(() => import("@/pages/contactUs"));
+const AdvantagesPage = lazy(() => import("@/pages/advantages"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
+const PrivacyInformation = lazy(() => import("@/pages/PrivacyInformation"));
 
 export enum AppRoutes {
-  HOME = "home",
   WELCOME = "welcome",
   OUR_SERVICES = "our_services",
   OUR_METHODOLOGY = "our_methodology",
@@ -21,7 +20,6 @@ export enum AppRoutes {
 }
 
 export const RoutePaths: Record<AppRoutes, string> = {
-  [AppRoutes.HOME]: "/",
   [AppRoutes.WELCOME]: "/welcome",
   [AppRoutes.OUR_SERVICES]: "/our-services",
   [AppRoutes.OUR_METHODOLOGY]: "/our-methodology",
@@ -32,10 +30,6 @@ export const RoutePaths: Record<AppRoutes, string> = {
 };
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
-  [AppRoutes.HOME]: {
-    path: RoutePaths.home,
-    element: <HomePage />
-  },
   [AppRoutes.WELCOME]: {
     path: RoutePaths.welcome,
     element: <WelcomePage />
