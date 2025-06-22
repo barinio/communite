@@ -25,6 +25,6 @@ and other pages.
 
 > Also used were NextUI, Tailwind, Formik and i18next.
 
-The project is deployed on vercel.com: [community](https://community.vercel.app/).
+The project is deployed on vercel.com: [communite](https://communite.vercel.app/).
 
 [^ Up to start ^](#start)
