@@ -1,6 +1,6 @@
 <a name="start"></a>
 
-# **_СommUnity_**
+# **_СommUnite_**
 
 This website is a business card for a law firm.
 
