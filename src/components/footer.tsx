@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <Link
-        className=" lg:max-w-[600px] lg:w-auto flex w-full sm:max-w-[180px] justify-center items-center text-current"
+        className="mr-5 lg:max-w-[600px] lg:w-auto flex w-full sm:max-w-[180px] justify-center items-center text-current"
         href="/privacy-policy"
       >
         <p className="w4k:text-xl font-medium dark:text-zinc-400 dark:opacity-50 text-base">

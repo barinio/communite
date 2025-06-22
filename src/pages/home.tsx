@@ -9,7 +9,7 @@ export default function HomePage() {
         <img src={homeBgImg} alt="home-bg-img" className="opacity-5 absolute top-[-55px] right-0" />
         <div className="h-full max-w-[1300px] text-center flex flex-col items-center justify-center m-auto gap-4 p-6 md:p-8">
           <h1 className="sm:text-7xl text-5xl sm:leading-relaxed leading-relaxed font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 mb-8">
-            СommUnity
+            СommUnite
           </h1>
           <h2 className="lg:w-[900px] w-[337px] sm:w-full break-all sm:break-normal leading-relaxed mx-auto sm:text-3xl text-xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-white to-zinc-400 mb-8">
             <span className="flex justify-center sm:inline ">Votre </span>
