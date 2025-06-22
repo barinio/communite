@@ -8,7 +8,7 @@ This website is a business card for a law firm.
 
 The site has a `Home page`:
 
-![Home page](./assets/home-page.png)
+![Home page](./assets/home-page.jpg)
 
 A `Welcome page`:
 
